@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   
   s.xcconfig = {
     "HEADER_SEARCH_PATHS" => '"$(PODS_ROOT)/librtmp/include"',
-    "OTHER_LDFLAGS" => "$(inherited) -undefined dynamic_loop"
+    "OTHER_LDFLAGS" => "$(inherited) -undefined dynamic_lookup"
   }
 end
