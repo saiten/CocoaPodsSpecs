@@ -17,13 +17,6 @@ Pod::Spec.new do |s|
 
   s.platform = :ios, '6.0'
   s.public_header_files = "include/librtmp/*.h"
-  s.vendored_libraries = "lib/librtmp.a"
-  
-  s.libraries = "rtmp"
+  s.vendored_libraries = "lib/librtmp.a"  
   s.requires_arc = false
-  
-  s.xcconfig = {
-    "HEADER_SEARCH_PATHS" => '"$(PODS_ROOT)/librtmp/include"',
-    "OTHER_LDFLAGS" => "$(inherited) -undefined dynamic_lookup"
-  }
 end
