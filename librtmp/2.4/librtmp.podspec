@@ -19,4 +19,7 @@ Pod::Spec.new do |s|
   s.public_header_files = "include/librtmp/*.h"
   s.vendored_libraries = "lib/librtmp.a"  
   s.requires_arc = false
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '$(inherited) -undefined dynamic_lookup'
+  }
 end
