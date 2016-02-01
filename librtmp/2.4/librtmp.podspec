@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   
   s.xcconfig = {
-    "HEADER_SEARCH_PATHS" => '"$(PODS_ROOT)/librtmp/include"'
+    "HEADER_SEARCH_PATHS" => '"$(PODS_ROOT)/librtmp/include"',
+    "OTHER_LDFLAGS" => "$(inherited) -undefined dynamic_loop"
   }
 end
